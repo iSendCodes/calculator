@@ -1,0 +1,120 @@
+*
+    box-sizing: border-box
+
+:root
+    --back:#fff
+    --text: #578
+    --shadow: #89a
+
+[data-theme=dark]
+    --back:#202830
+    --text: #fff
+    --shadow: #101820
+
+$back: var(--back)
+$text: var(--text)
+$shadow: var(--shadow)
+$radius: 1rem
+
+@font-face
+    font-family: OpenSans
+    src: url('../font/OpenSans.ttf')
+
+body
+    background: $back
+    color: $text
+    margin: 0px
+    padding: 1rem
+    height: 100vh
+    width: 100vw
+    font-size: 1rem
+    font-family: OpenSans, monospace
+
+input, button
+    font: inherit
+    color: inherit
+
+// Calculator Class
+.calculator
+    display: grid
+    grid-template-rows: auto 1fr auto
+    background: $back
+    padding: 1rem
+    margin: auto
+    width: 100%
+    height: 100%
+    border-radius: $radius
+    box-shadow: 5px 5px 50px $shadow
+    @media screen and (min-width: 480px)
+        width: auto
+        aspect-ratio: 9 / 16
+
+    .display
+        display: flex
+        flex-direction: column
+        justify-content: end
+        align-items: end
+        padding: 0 1rem
+        overflow: hidden
+
+        sub
+            font-size: 1.5rem
+            opacity: 0.7
+        main
+            font-size: 3rem
+
+    .buttons
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        padding: 0.5rem
+        gap: 0.5rem
+
+        button
+            aspect-ratio: 1
+            font-size: 1.25rem
+            transition: background 0.4s
+            border-radius: $radius
+            background: transparent
+            border: none
+            cursor: pointer
+
+            &:hover, &:active 
+                background: #7891
+
+// Theme Toggler
+.switch
+    input[type=checkbox]
+        display: none
+
+        &:checked + label
+            .on
+                color: transparent
+            .off
+                color: inherit
+
+        & + label
+            .off
+                color: transparent
+            .on
+                color: inherit
+
+    label
+        background: #8882
+        padding: 0.5rem 0.75rem
+        border-radius: $radius
+        user-select: none
+        cursor: pointer
+        transition: background 0.5s
+
+        .on, .off
+            transition: color 0.5s
+
+// Flex Utilities
+.flex
+    display: flex
+    &.center 
+        justify-content: center
+    &.between 
+        justify-content: space-between
+    &.middle 
+        align-items: center
