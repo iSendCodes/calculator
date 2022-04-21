@@ -3,4 +3,5 @@
 - HTML
 - PHP
 - SASS
+- CSS
 - Javascript
