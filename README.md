@@ -1,7 +1,5 @@
 # Calculator
 
 - HTML
-- PHP
-- SASS
-- CSS
+- SASS/CSS
 - Javascript
