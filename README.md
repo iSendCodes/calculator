@@ -1,2 +1,6 @@
-# calculator
- 
+# Calculator
+
+- HTML
+- PHP
+- SASS
+- Javascript
