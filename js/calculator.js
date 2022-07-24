@@ -22,7 +22,7 @@ let displaySub = get('.display sub');
 
 let getMain = () => displayMain.innerHTML;
 let getSub = () => displaySub.innerHTML;
-function setMain(num) { displayMain.innerHTML = num }
+function setMain(num) { displayMain.innerHTML = fixed(num) }
 function setSub(num) { displaySub.innerHTML = num }
 let fixed = (num) => num.toFixed(6).replace(/\.0{0,6}$/, "");
 let operated = false;
