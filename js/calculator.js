@@ -24,7 +24,7 @@ let getMain = () => displayMain.innerHTML;
 let getSub = () => displaySub.innerHTML;
 function setMain(num) { displayMain.innerHTML = fixed(num) }
 function setSub(num) { displaySub.innerHTML = num }
-let fixed = (num) => num.toFixed(6).replace(/\.0{0,6}$/, "");
+let fixed = (num) => num.toFixed(8).replace(/\.0{0,8}$/, "");
 let operated = false;
 
 function cls() {
